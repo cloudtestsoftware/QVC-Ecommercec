@@ -7,7 +7,7 @@ For read operation this varible will be stored in run time with variable name ju
 
 	
 	<qvc_category description="Give a brief description about this injector what it should do">
-	    <tag description=" Landing to home page" method="get" url="http://www.qvc.com/fashion/_/N-lglt/c.html"/>
+	    <tag description=" Landing to home page" method="get" url="/fashion/_/N-lglt/c.html"/>
 		<tag description="click on Shop By Category"   tagname="span" havingAttribute="#text::Shop By Category#id::liMenuHeader0000"></tag>
 		<tag description="click on @mainmenu_name"   tagname="a" havingAttribute="#text::@mainmenu_name#manual_cm_sp::MH-_-@mainmenu_upper-_-@mainmenu_upper#manual_cm_re::MH-_-@mainmenu_upper-_-@mainmenu_upper#href::/@mainmenu_lower/"></tag>
 		<tag description="click on @submenu_name"   tagname="a" havingAttribute="#text::@submenu_name#title::@submenu_name#manual_cm_sp::LN-_-DEPARTMENTS-_-@submenu_upper#manual_cm_re::LN-_-DEPARTMENTS-_-@submenu_upper#href::/@mainmenu_lower/@submenu_lower/"></tag>
@@ -15,8 +15,9 @@ For read operation this varible will be stored in run time with variable name ju
 	</qvc_category>
 	
 	<qvc_start description="Give a brief description about this injector what it should do">
-		<tag description=" Landing to home page" method="get" url="http://www.qvc.com/fashion/_/N-lglt/c.html"/>
-		<tag description="click on Search"   tagname="a" havingAttribute="id::TB_closeWindowButton"></tag>
+		<tag description=" Landing to home page" method="get" url="/fashion/_/N-lglt/c.html"/>
+		<tag description="close popup"   tagname="a" havingAttribute="id::TB_closeWindowButton"></tag>
+		<tag description="close opinion"   tagname="span" havingAttribute="text::NEVER SHOW AGAIN"></tag>
 		<!--  
 		<tag description="write on Search"   tagname="input" havingAttribute="id::search">tv</tag>
 		<tag description="click on Search"   tagname="button" havingAttribute="class::searchbar-submit"></tag>
@@ -24,11 +25,8 @@ For read operation this varible will be stored in run time with variable name ju
 	</qvc_start>
 	
 	<qvc_search description="Give a brief description about this injector what it should do">
-		<tag description=" Landing to home page" method="get" url="http://www.qvc.com/fashion/_/N-lglt/c.html"/>
 		<tag description="write on Search QVC:"   tagname="input" havingAttribute="xpath:://*[@id=!txtMastheadSearch! or @name=!keyword!]#placeholder::Search QVC#autocorrect::off#autocomplete::on#type::text#name::keyword#id::txtMastheadSearch">@searchtext</tag>
 		<tag description="click on Search QVC:"   tagname="input.primaryButton" havingAttribute="xpath:://*[@id=!btnMastheadSearch!]#value::Go#alt::Go#type::submit#id::btnMastheadSearch"></tag>
-		<tag description="click on @searchtext"   tagname="img.imageDimensions" havingAttribute="xpath:://*[@id=!frmProductList!]/div[4]/div[3]/div[1]/span/div[1]/div[1]/a/img#title::@searchtext#alt::@searchtext#src::/is/image/a/"></tag>
-		<tag description="read on amount for @searchtext"   tagname="p" stripchar="$" havingAttribute="xpath:://*[@id=!parProductDetailPrice!]#text::00,#id::parProductDetailPrice">@v_verify_item_value</tag>
 	</qvc_search>
 	
 	<qvc_price description="Click and extract price">
