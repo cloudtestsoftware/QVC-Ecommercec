@@ -15,7 +15,7 @@ Please reffer to your training manual or FAQ documents for details.  -->
 <action  name="248EC73C2C4101B2E0505D0A1FAB5F8E"  dataset="global:xls.qvc_category_data" description="Navigate to all items in each department using menu">
 	   
 
-		<validator name="Step-1: Navigation Tests for @submenu_name"  description=" Write few word why you need this step">
+		<validator name="Step-1: Navigation Tests for @submenu_name : @searchtext"  description=" Write few word why you need this step">
 			
 			<junit name="Test Browser Action= 248EC73C2C4101B2E0505D0A1FAB5F8E or Give any meaningful name for this container">
 				<testPackage name="com.testmax.runner">
